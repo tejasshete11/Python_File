@@ -3,7 +3,7 @@ name:Basic Commands
 
     -main
    schedule:
-    -cron:"OO***"#Every two miniutes UTC
+    -cron:"*/2****"#Every two miniutes UTC
    workflow_dispatch: #Manual trigger
 
 jobs:
