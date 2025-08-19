@@ -1,20 +1,19 @@
 name:Basic Commands
 
-
-    -main
-   schedule:
-    -cron:"*/2****"#Every two miniutes UTC
-   workflow_dispatch: #Manual trigger
+on:
+  schedule:
+    - cron: "*/2 * * * *"#Every two miniutes UTC
+  workflow_dispatch:
 
 jobs:
- demo-commands:
-  runs-on:ubuntu-latest
+  demo-commands:
+    runs-on:ubuntu-latest
+     
+    steps:
+      -name:Show current working directory
+       run:pwd
 
-  steps:
-   -name:Show current working directory
-    run:pwd
-
-   -name:List files in the directory
-    run:ls-la
+     -name:List files in the directory
+      run:ls-la
 
  
